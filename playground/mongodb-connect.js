@@ -9,19 +9,19 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db) =>{
 
 
     //insert a new record to a new collection
-   db.collection('Todos').insertOne({
-        text: 'something',
-        complete: false
-    }, (err, result) => {
-        if(err){
-            return console.log('Unable to insert Todo', err);
-        }
+//    db.collection('Todos').insertOne({
+//         text: 'something',
+//         complete: false
+//     }, (err, result) => {
+//         if(err){
+//             return console.log('Unable to insert Todo', err);
+//         }
 
-        console.log(JSON.stringify(result.ops, undefined, 2));
-    });
+//         console.log(JSON.stringify(result.ops, undefined, 2));
+//     });
    db.collection('Users').insertOne({
         name: 'kelvin',
-        age: 23,
+        age: 30,
         location: 'van'
     }, (err, result) => {
         if(err){
