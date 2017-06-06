@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 //相对于playground/mongodb-connect文件里面那种文件的链接mongodb的方法(也就是call mongo client),
 //mongoose is maintaining the connection to DB all the time
-mongoose.connect('mongodb://localhost:27017/TodoApp');
+mongoose.connect(process.env.MONGODB_URI);
 
 //######下面是如何存一个instance
 //save instances to the DB, since not using callbacks( promise is more manageable and easy to chain)
